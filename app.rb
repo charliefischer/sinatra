@@ -14,7 +14,15 @@ get '/test' do
   "does"
 end
 
-get '/cat' do
- @random_name = ["Amigo", "Oscar", "Viking"].sample
+get '/random-cat' do
+ @name = ["Amigo", "Oscar", "Viking"].sample
  erb(:index)
 end
+
+get '/named-cat' do
+  p params[:name]
+  p params[:age]
+  @name = params[:name]
+  @age = params[:age]
+  erb(:index)
+end 
