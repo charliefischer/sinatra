@@ -1,5 +1,15 @@
 require 'sinatra'
 
+set :session_secret, 'super secret'
+
 get '/' do
-  "Hello World"
+  "hello"
 end
+
+get '/secret' do
+  "testing"
+end 
+
+get '/test' do
+  "does"
+end 
