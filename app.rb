@@ -14,8 +14,6 @@ get '/test' do
   "does"
 end
 
-get '/cat', :provides => 'html' do
-  "<div style='border: 3px dashed blue'>
-    <img src='https://icatcare.org/app/uploads/2018/07/Thinking-of-getting-a-cat.png'>
-  </div>"
+get '/cat' do
+ erb(:index)
 end
